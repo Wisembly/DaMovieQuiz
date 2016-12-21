@@ -1,0 +1,40 @@
+.Round {
+    display: flex;
+    justify-content: space-between;
+
+    flex: 1;
+}
+
+.Round-movie, .Round-actor {
+    margin: auto 0;
+
+    width: 30%;
+}
+
+.Round-movie-pad, .Round-actor-pad {
+    position: relative;
+
+    padding-top: 100%;
+}
+
+.Round-movie-inner, .Round-actor-inner {
+    position: absolute;
+    left: 0; right: 0;
+    top: 0; bottom: 0;
+
+    border-radius: 10px;
+}
+
+.Round-movie-inner {
+    background: red;
+}
+
+.Round-actor-inner {
+    background: blue;
+}
+
+.Round-controls {
+    margin: auto;
+
+    text-align: center;
+}

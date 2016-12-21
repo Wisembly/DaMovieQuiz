@@ -1,0 +1,46 @@
+<!doctype html>
+<meta charset="utf-8">
+
+<script src="./vendors/Requirejs-2.3.2.min.js"></script>
+
+<script>
+
+    requirejs.config({
+
+        baseUrl: "/DaMovieQuiz/",
+
+        paths: {
+            "babel": "./vendors/Babel-6.21.0.min",
+            "react": "./vendors/React-15.4.1",
+            "react-dom": "./vendors/ReactDOM-15.4.1",
+            "tapestry-css": "./vendors/Tapestry-1.4.0",
+            "css": "vendors/Requirejs.css-0.1.8.min",
+            "es6": "vendors/Requirejs.babel-0.4.0"
+        },
+
+        map: {
+            "*": {
+                "components": "sources/components"
+           }
+        },
+
+        es6: {
+            fileExtension: ".js"
+        },
+
+        babel: {
+            presets: [ "es2015", "react", "stage-0" ],
+            plugins: [ "transform-es2015-modules-amd" ]
+        }
+
+    });
+
+    window.addEventListener("load", function () {
+
+        require([ "es6!./sources/main" ], function () {
+            console.log("OK - Good luck!");
+        });
+
+    });
+
+</script>
